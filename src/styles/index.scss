@@ -1,2 +1,6 @@
-@import "./settings";
-@import "./components/navigation";
+@use "./settings";
+@use "./components/Navbar";
+@use "./components/PageHeader";
+@use "./components/Gallery";
+@use "./components/Card";
+@use "./components/Footer";

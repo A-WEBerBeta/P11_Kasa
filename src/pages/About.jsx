@@ -1,7 +1,12 @@
+import bgAbout from "../assets/img/source2.png";
+import Footer from "../components/Footer";
+import PageHeader from "../components/PageHeader";
+
 const About = () => {
   return (
     <div className="About">
-      <h1>A propos</h1>
+      <PageHeader backgroundImage={bgAbout} title="" overlayOpacity={0.3} />
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,32 @@
+@use "../settings" as *;
+
+.page-header {
+  position: relative;
+  height: 223px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  margin-bottom: 43px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px 0 #00000025;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__overlay {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: $header-font-size;
+    color: white;
+    z-index: 1;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.55);
+  }
+}
