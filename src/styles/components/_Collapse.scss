@@ -1,0 +1,80 @@
+@use "../settings" as *;
+
+.collapse {
+  color: white;
+
+  &__title {
+    background-color: $main-color;
+    border-radius: 5px;
+    padding: 10px 20px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+
+    img {
+      display: block;
+    }
+
+    p {
+      font-weight: 700;
+    }
+  }
+
+  @keyframes rotateOpen {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .open {
+    .chevron {
+      animation: rotateOpen 0.4s forwards;
+    }
+  }
+
+  @keyframes rotateClose {
+    0% {
+      transform: rotate(-180deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  .closed {
+    .chevron {
+      animation: rotateClose 0.4s forwards;
+    }
+  }
+
+  &__content {
+    background-color: $bg-grey;
+    color: black;
+    border-radius: 0 0 5px 5px;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease, padding 0.4s ease;
+    padding: 0 20px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    p,
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      overflow: hidden;
+    }
+    &.open {
+      grid-template-rows: 1fr;
+      padding: 25px 20px 20px;
+    }
+  }
+}

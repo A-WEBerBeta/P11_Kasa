@@ -1,5 +1,4 @@
 import bgHome from "../assets/img/source1.png";
-import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import PageHeader from "../components/PageHeader";
 
@@ -12,7 +11,6 @@ const Home = () => {
         overlayOpacity={0.6}
       />
       <Gallery />
-      <Footer />
     </div>
   );
 };

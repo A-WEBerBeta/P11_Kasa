@@ -1,12 +1,14 @@
 .card {
-  width: 340px;
-  height: 340px;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+  &__background {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
 
   &__overlay {
     position: absolute;

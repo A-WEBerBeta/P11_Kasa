@@ -3,19 +3,37 @@
 // Variables Sass
 $font: "Montserrat", sans-serif;
 $header-font-size: 48px;
+$main-color: #ff6060;
+$bg-grey: #f6f6f6;
 
-body {
-  font-family: $font;
-  font-weight: 500;
-  padding: 45px 100px 0;
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.container {
+  padding: 0 100px;
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: $font;
+  font-weight: 500;
+  line-height: 143%;
+}
+
+p {
+  font-size: 18px;
 }
 
 li {

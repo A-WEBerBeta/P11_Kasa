@@ -1,4 +1,5 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink } from "react-router";
+import Logo from "../assets/img/logo.png";
 
 const Navbar = () => {
   return (
@@ -6,7 +7,7 @@ const Navbar = () => {
       <nav>
         <div className="navbar__logo">
           <NavLink to="/">
-            <img src="./logo.png" alt="logo Kasa" />
+            <img src={Logo} alt="logo Kasa" />
           </NavLink>
         </div>
         <ul className="navbar__links">
@@ -18,7 +19,6 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <Outlet />
     </div>
   );
 };
