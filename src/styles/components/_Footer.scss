@@ -19,3 +19,16 @@
     font-weight: 500;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    gap: 10px;
+    margin-top: 27px;
+
+    &__copyright p {
+      width: 133px;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

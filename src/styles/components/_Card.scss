@@ -1,7 +1,7 @@
 .card {
   &__background {
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
@@ -32,5 +32,13 @@
     font-weight: 700;
     font-size: 18px;
     padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    &__background {
+      max-height: 255px;
+    }
   }
 }

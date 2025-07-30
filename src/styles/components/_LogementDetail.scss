@@ -52,6 +52,7 @@
 
     .tags {
       display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       margin-top: 20px;
 
@@ -70,6 +71,11 @@
     }
 
     .host-rating {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 21px;
+
       .host {
         display: flex;
         align-items: center;
@@ -87,6 +93,11 @@
           object-fit: cover;
         }
       }
+
+      .rating {
+        display: flex;
+        gap: 14px;
+      }
     }
   }
 
@@ -94,5 +105,105 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 76px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logement-detail {
+    &__info {
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    &__carousel {
+      .carousel-arrow {
+        img {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logement-detail {
+    &__carousel {
+      margin-bottom: 15px;
+
+      .slide-image {
+        height: 255px;
+        border-radius: 10px;
+      }
+
+      .carousel-arrow {
+        img {
+          height: 20px;
+        }
+
+        &.left {
+          left: 6px;
+        }
+
+        &.right {
+          right: 6px;
+        }
+      }
+
+      .carousel-count {
+        display: none;
+      }
+    }
+    &__info {
+      flex-direction: column;
+      h1 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 14px;
+      }
+
+      .tags {
+        margin-top: 10px;
+        margin-bottom: 16px;
+
+        .tag {
+          font-size: 10px;
+          padding: 0 10px;
+          height: 18px;
+        }
+      }
+    }
+
+    .host-rating {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      .host {
+        p {
+          font-size: 12px;
+        }
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      .rating {
+        gap: 6px;
+
+        img {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+
+    .toggle {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 }

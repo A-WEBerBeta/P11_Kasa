@@ -28,3 +28,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    nav {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin-top: 20px;
+
+    nav {
+      margin-bottom: 27px;
+    }
+
+    &__logo img {
+      width: 145px;
+    }
+
+    &__links {
+      gap: 26px;
+      font-size: 12px;
+      text-align: right;
+
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

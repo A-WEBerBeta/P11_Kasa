@@ -8,3 +8,20 @@
   background-color: #f6f6f6;
   border-radius: 25px;
 }
+
+@media screen and (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 40px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+}

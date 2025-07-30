@@ -78,3 +78,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .collapse {
+    &__title {
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collapse {
+    &__title {
+      height: 30px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    &__content {
+      p,
+      li {
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      &.open {
+        padding: 13px 20px 19px;
+      }
+    }
+  }
+}

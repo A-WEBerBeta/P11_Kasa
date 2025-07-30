@@ -4,10 +4,10 @@
   color: $main-color;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: calc(100vh - 380px);
-  padding-bottom: 80px;
+  // padding-bottom: 80px;
 
   h1 {
     font-size: 250px;
@@ -22,5 +22,37 @@
   p {
     text-decoration: underline;
     color: black;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .error-container {
+    h1 {
+      font-size: 150px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .error-container {
+    justify-content: space-around;
+    padding-bottom: 0;
+
+    h1 {
+      font-size: 96px;
+    }
+
+    h2 {
+      font-size: 18px;
+      text-align: center;
+      width: 260px;
+    }
+
+    p {
+      font-size: 14px;
+    }
   }
 }
