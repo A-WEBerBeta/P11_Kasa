@@ -92,6 +92,10 @@
     &__title {
       height: 30px;
 
+      .chevron img {
+        width: 16px;
+      }
+
       p {
         font-size: 13px;
       }
