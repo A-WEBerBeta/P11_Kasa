@@ -1,9 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "./components/Layout.jsx";
-import LogementDetail from "./components/LogementDetail.jsx";
 import About from "./pages/About.jsx";
 import Home from "./pages/Home.jsx";
+import LogementDetail from "./pages/LogementDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import "./styles/index.scss";
 

@@ -15,6 +15,7 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel">
+      {/* on définit l'existence des arrows seulement s'il y a plus d'une image */}
       {pictures.length > 1 && (
         <>
           <button className="carousel-arrow left" onClick={prevSlide}>
@@ -25,11 +26,22 @@ const Carousel = ({ pictures }) => {
           </button>
         </>
       )}
-      <img
-        src={pictures[currentIndex]}
-        alt={`slide ${currentIndex + 1}`}
-        className="slide-image"
-      />
+      <div className="carousel-wrapper">
+        <div
+          className="carousel-track"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {pictures.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              className="slide-image"
+              alt={`slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+      {/* on définit l'existence du compteur seulement s'il y a plus d'une image */}
       {pictures.length > 1 && (
         <p className="carousel-count">
           {currentIndex + 1} / {pictures.length}

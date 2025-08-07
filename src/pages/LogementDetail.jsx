@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
+import Carousel from "../components/Carousel";
+import Collapse from "../components/Collapse";
+import Rating from "../components/Rating";
 import data from "../data/logements.json";
-import Carousel from "./Carousel";
-import Collapse from "./Collapse";
-import Rating from "./Rating";
 
 const LogementDetail = () => {
   const { id } = useParams();
@@ -62,8 +62,16 @@ const LogementDetail = () => {
           </div>
 
           <div className="toggle">
-            <Collapse title="Description" content={logement.description} />
-            <Collapse title="Équipements" content={logement.equipments} />
+            <Collapse title="Description">
+              <p>{logement.description}</p>
+            </Collapse>
+            <Collapse title="Équipements">
+              <ul>
+                {logement.equipments.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </Collapse>
           </div>
         </div>
       ) : (

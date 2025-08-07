@@ -2,7 +2,7 @@ import { useState } from "react";
 // import chevronDown from "../assets/img/chevron-down.png";
 import chevronUp from "../assets/img/chevron-up.png";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(0);
 
   const toggleCollapse = () => {
@@ -31,15 +31,7 @@ const Collapse = ({ title, content }) => {
           isOpen === 1 ? "open" : isOpen === -1 ? "closed" : ""
         }`}
       >
-        {Array.isArray(content) ? (
-          <ul>
-            {content.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>{content}</p>
-        )}
+        {children}
       </div>
     </div>
   );
